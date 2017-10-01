@@ -10,11 +10,16 @@ window.onload = function () {
 	var tapaIcon = new Icon({iconUrl: 'tapa.png'}),
 		restIcon = new Icon({iconUrl: 'restaurante.png'});
 
-	L.marker([37.237753, -3.568379], {icon: tapaIcon}).bindPopup('Bar Nuevo Plaza II <br> Especialidad en carnes a la brasa').addTo(tapas),
-	L.marker([37.235574, -3.565105], {icon: tapaIcon}).bindPopup('Il Club <br> Pizzas caseras').addTo(tapas),
-	L.marker([37.237906, -3.567529], {icon: tapaIcon}).bindPopup('Casa Miguel').addTo(tapas),
+	L.marker([37.237753, -3.568379], {icon: tapaIcon}).bindPopup('Bar Nuevo Plaza II <br> Especialidad en carnes a la brasa').addTo(tapas);
+	L.marker([37.235574, -3.565105], {icon: tapaIcon}).bindPopup('Il Club <br> Pizzas caseras').addTo(tapas);
+	L.marker([37.237906, -3.567529], {icon: tapaIcon}).bindPopup('Casa Miguel').addTo(tapas);
+	L.marker([37.236767, -3.566578], {icon: tapaIcon}).bindPopup('Bar Bodega de Ángeles <br> Comida casera y para llevar').addTo(tapas);
+	L.marker([37.236648, -3.566898], {icon: tapaIcon}).bindPopup('Cafetería Marely. Desayunos, meriendas y tapas.').addTo(tapas);
 
 	L.marker([37.236278, -3.570152], {icon: restIcon}).bindPopup('Alfapizza').addTo(restaurantes);
+	L.marker([37.236005, -3.564625], {icon: restIcon}).bindPopup('Ruta de Lorca <br> Tapas, Almuerzos y Eventos').addTo(restaurantes);
+	L.marker([37.245611, -3.554206], {icon: restIcon}).bindPopup('Fuente Grande <br> Comida casera. Actuaciones en directo.').addTo(restaurantes);
+	L.marker([37.246738, -3.554358], {icon: restIcon}).bindPopup('El Patio <br> Comida tradicional.').addTo(restaurantes);
 
 
 	var normal   = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -46,4 +51,4 @@ window.onload = function () {
 	};
 
 	L.control.layers(mapas, marcadores).addTo(map);
-}
+};
