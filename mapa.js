@@ -32,17 +32,24 @@ window.onload = function () {
 			id: 'mapbox.streets',
 			maxZoom: 17,   
 			attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+		}),
+
+		sateliteGoogle = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+		    maxZoom: 17,
+		    subdomains:['mt0','mt1','mt2','mt3'],
+		    attribution: 'Google Maps'
 		});
 
 	var map = L.map('mapa', {
 			center: [37.236830, -3.567236],
 			zoom: 15,
-			layers: [normal, carreteras]
+			layers: [normal]
 	});
 
 	var mapas = {
 			"Normal": normal,
-			"Carreteras": carreteras
+			"Carreteras": carreteras,
+			"Satélite": sateliteGoogle
 	};
 
 	var marcadores = {
