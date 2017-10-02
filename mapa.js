@@ -80,4 +80,10 @@ window.onload = function () {
 	};
 
 	L.control.layers(mapas, marcadores).addTo(map);
+
+	Limite2 = L.marker([37.247863, -3.554884]);
+	Limite1 = L.marker([37.233017, -3.569075]);
+
+	var limites = new L.featureGroup([Limite1, Limite2]);
+	map.setMaxBounds(limites.getBounds());
 };
